@@ -1,0 +1,16 @@
+<resources>
+<string name="app_name">YConnect Android Demo</string>
+<string name="hello_world">Hello world!</string>
+<string name="menu_settings">Settings</string>
+<string name="title_activity_yconnect_implicit">YConnectImplicitActivity</string>
+<string name="title">YConnect Implicit Flow</string>
+<string name="button_start">Let\'s YConnect!</string>
+
+<string name="access_token">Access Token:</string>
+<string name="expiration">Expiration:</string>
+<string name="id_token">Id Token:</string>
+<string name="id_token_object">Id Token Object:</string>
+<string name="user_info">UserInfo:</string>
+<string name="blunk">---</string>
+
+</resources>
