@@ -8,6 +8,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
+import jp.co.yahoo.yconnect.YConnectImplicit;
+import jp.co.yahoo.yconnect.core.oauth2.AuthorizationException;
+import jp.co.yahoo.yconnect.core.oidc.OIDCDisplay;
+import jp.co.yahoo.yconnect.core.oidc.OIDCPrompt;
+import jp.co.yahoo.yconnect.core.oidc.OIDCScope;
+
 public class YConnectImplicitActivity extends Activity {
 
     private final static String TAG = YConnectImplicitActivity.class.getSimpleName();
@@ -76,8 +82,8 @@ public class YConnectImplicitActivity extends Activity {
                 editor.commit();
 
                 // 別スレッド(AsynckTask)でID Tokenの検証、UserInfoエンドポイントにリクエスト
-                YConnectImplicitAsyncTask asyncTask = new YConnectImplicitAsyncTask(this, idTokenString);
-                asyncTask.execute("Verify ID Token and Request UserInfo.");
+//                YConnectImplicitAsyncTask asyncTask = new YConnectImplicitAsyncTask(this, idTokenString);
+//                asyncTask.execute("Verify ID Token and Request UserInfo.");
 
             } catch (AuthorizationException e) {
                 Log.e(TAG, "error=" + e.getError() + ", error_description=" + e.getErrorDescription());
