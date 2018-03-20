@@ -19,7 +19,7 @@ public class YConnectImplicitActivity extends Activity {
     private final static String TAG = YConnectImplicitActivity.class.getSimpleName();
 
     // Client ID
-    public final static String clientId = "YOUR_APPLICATION_ID";
+    public final static String clientId = "xxxxxxxxxxxxx";
 
     //1を指定した場合、同意キャンセル時にredirect_uri設定先へ遷移する
     public final static String BAIL = "1";
@@ -105,8 +105,8 @@ public class YConnectImplicitActivity extends Activity {
             // リプレイアタック対策のランダムな文字列を指定してください
             String nonce = "KOOAjeODu8+J44O7KeOAjVlhaG9vISAo77yP44O7z4njg7sp77yPSkFQQU4=";
             String display = OIDCDisplay.TOUCH;
-            String[] prompt = {OIDCPrompt.DEFAULT};
-            String[] scope = {OIDCScope.OPENID, OIDCScope.PROFILE, OIDCScope.EMAIL, OIDCScope.ADDRESS};
+            String[] prompt = {OIDCPrompt.CONSENT};
+            String[] scope = {OIDCScope.OPENID, OIDCScope.PROFILE, OIDCScope.EMAIL};
 
             try {
                 // state、nonceを保存

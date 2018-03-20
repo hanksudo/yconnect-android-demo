@@ -17,6 +17,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".YConnectImplicitActivity"
+            android:label="@string/app_name"
+            android:exported="true"
+            android:permission="android.permission.INTERNET"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="yj-xxxxx" />
+                <data android:host="cb" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
